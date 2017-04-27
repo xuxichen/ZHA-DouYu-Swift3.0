@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="klA-a1-ozX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Live View Controller-->
+        <scene sceneID="fk0-FD-CA8">
+            <objects>
+                <viewController id="T3C-t3-D52" customClass="LiveViewController" customModule="ZW_DouYu_Swift3_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ibv-NG-aal"/>
+                        <viewControllerLayoutGuide type="bottom" id="IDE-QV-f5A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VGP-6v-keY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uH1-jr-GoM">
+                                <rect key="frame" x="53" y="101" width="62" height="30"/>
+                                <state key="normal" title="开始采集"/>
+                                <connections>
+                                    <action selector="starCapture" destination="T3C-t3-D52" eventType="touchUpInside" id="dZi-0v-C03"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVb-rO-H6y">
+                                <rect key="frame" x="260" y="101" width="62" height="30"/>
+                                <state key="normal" title="停止采集"/>
+                                <connections>
+                                    <action selector="stopCapture" destination="T3C-t3-D52" eventType="touchUpInside" id="TPV-RA-Kos"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2p-3O-4CT">
+                                <rect key="frame" x="156" y="72" width="62" height="30"/>
+                                <state key="normal" title="切换镜头"/>
+                                <connections>
+                                    <action selector="switchScene" destination="T3C-t3-D52" eventType="touchUpInside" id="nhR-8c-7qB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uH1-jr-GoM" firstAttribute="leading" secondItem="VGP-6v-keY" secondAttribute="leadingMargin" constant="37" id="DKE-s4-muq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MVb-rO-H6y" secondAttribute="trailing" constant="37" id="Rg8-G5-V51"/>
+                            <constraint firstItem="y2p-3O-4CT" firstAttribute="centerX" secondItem="VGP-6v-keY" secondAttribute="centerX" id="bHq-tN-LnJ"/>
+                            <constraint firstItem="y2p-3O-4CT" firstAttribute="top" secondItem="Ibv-NG-aal" secondAttribute="bottom" constant="8" id="imc-YG-O5a"/>
+                            <constraint firstItem="MVb-rO-H6y" firstAttribute="top" secondItem="Ibv-NG-aal" secondAttribute="bottom" constant="37" id="pPF-or-Wno"/>
+                            <constraint firstItem="uH1-jr-GoM" firstAttribute="top" secondItem="Ibv-NG-aal" secondAttribute="bottom" constant="37" id="y4i-wV-Cxv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gWK-9m-gPl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9fQ-IP-CIA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1311.2" y="368.36581709145429"/>
+        </scene>
+        <!--直播-->
+        <scene sceneID="pY4-vT-OS1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="klA-a1-ozX" customClass="CustomNavigationController" customModule="ZW_DouYu_Swift3_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="直播" image="tabLiving" selectedImage="tabLivingHL" id="Upt-KT-Hai"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A87-DN-pzl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T3C-t3-D52" kind="relationship" relationship="rootViewController" id="QTI-ze-aOz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u1o-1E-se4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="368.36581709145429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabLiving" width="24" height="24"/>
+        <image name="tabLivingHL" width="24" height="24"/>
+    </resources>
+</document>

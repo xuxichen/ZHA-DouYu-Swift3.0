@@ -1,0 +1,6 @@
+framework module Pods_ZHA_DouYu_Swift3_0 {
+  umbrella header "Pods-ZHA-DouYu-Swift3.0-umbrella.h"
+
+  export *
+  module * { export * }
+}
